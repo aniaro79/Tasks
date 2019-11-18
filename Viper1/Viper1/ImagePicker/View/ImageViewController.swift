@@ -67,7 +67,7 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
     @IBAction func LogOut(_ sender: Any) {
         
        
-        
+     //Add Logout code
     
         
     }
