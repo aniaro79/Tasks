@@ -61,13 +61,15 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
         selectedImageData  = imageData
         // Dismiss the picker.
         dismiss(animated: true, completion:{ self.saveImage()})
-    
+       
+
+        
     }
     
     @IBAction func LogOut(_ sender: Any) {
         
        
-     //Add Logout code
+        
     
         
     }
@@ -90,7 +92,7 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        fetchImage()
+        //fetchImage()
         print(arrayofImagedata)
         print("*****************")
         self.myCollectionView.reloadData()
@@ -111,7 +113,6 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
     }
     */
     func saveImage() {
-        
         if selectedImageData != nil {
             let saveImageObj = Image(context: PersistenceService.context)
             saveImageObj.photo = selectedImageData// as NSData?
@@ -120,7 +121,6 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
             fetchImage()
             print("*****************")
         }
-        
     }
     
     

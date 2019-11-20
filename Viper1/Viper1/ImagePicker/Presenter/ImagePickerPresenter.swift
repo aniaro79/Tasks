@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 class ImagePickerPresenter:ImagePickerViewToPresenterProtocol,ImagePickerInterectorToPresenterProtocol{
-  
+   
+    
+   
+    
     var view: ImagePickerPresenterToViewProtocol?
     
     var interactor: ImagePickerPresentorToInterectorProtocol?

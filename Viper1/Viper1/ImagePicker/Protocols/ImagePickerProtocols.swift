@@ -20,13 +20,15 @@ protocol ImagePickerInterectorToPresenterProtocol: class {
 
 protocol ImagePickerPresentorToInterectorProtocol: class {
     var presenter: ImagePickerInterectorToPresenterProtocol? { get set }
- 
+    
+    
 }
 
 protocol ImagePickerViewToPresenterProtocol: class {
     var view : ImagePickerPresenterToViewProtocol? { get set }
     var interactor :ImagePickerPresentorToInterectorProtocol? { get set }
     var wireframe : ImagePickerPresenterToRouterProtocol? { get set }
+    
 
     
 
