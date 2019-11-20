@@ -34,15 +34,14 @@ class LoginRouter: LoginPresenterToRouterProtocol {
     
    func showImagePickerModule(from view: LoginPresenterToViewProtocol) {
          print("showImagePickerModule")
-        
-    let NavigationVC = ImagePickerRouter.createImagePicker()
-            if let sourceView = view as? UIViewController{
-            print("showImagePickerModule")
-            sourceView.addChild(NavigationVC)
-            sourceView.view.addSubview(NavigationVC.view)
-            NavigationVC.didMove(toParent: sourceView)
 
-   }
+    let NavigationVC = ImagePickerRouter.createImagePicker()
+    if let sourceView = view as? UIViewController{
+        NavigationVC.modalPresentationStyle = .fullScreen
+        sourceView.present(NavigationVC, animated: true)
+    }
+    
+    
     }
 
 }

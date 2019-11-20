@@ -87,6 +87,36 @@
             </objects>
             <point key="canvasLocation" x="2860.8695652173915" y="99.776785714285708"/>
         </scene>
+        <!--Full Screen View Controller-->
+        <scene sceneID="hpM-Pw-sgN">
+            <objects>
+                <viewController storyboardIdentifier="FullScreen" id="L8z-Fq-0Du" customClass="FullScreenViewController" customModule="Viper1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ac-NR-gc5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIm-Sg-Zll">
+                                <rect key="frame" x="75" y="144" width="264" height="618"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X7z-Bs-IdW" firstAttribute="trailing" secondItem="kIm-Sg-Zll" secondAttribute="trailing" constant="75" id="Cd3-31-PWn"/>
+                            <constraint firstItem="X7z-Bs-IdW" firstAttribute="bottom" secondItem="kIm-Sg-Zll" secondAttribute="bottom" constant="100" id="Oaa-BB-9vw"/>
+                            <constraint firstItem="kIm-Sg-Zll" firstAttribute="top" secondItem="X7z-Bs-IdW" secondAttribute="top" constant="100" id="XZg-7I-QWO"/>
+                            <constraint firstItem="kIm-Sg-Zll" firstAttribute="leading" secondItem="X7z-Bs-IdW" secondAttribute="leading" constant="75" id="ju3-Sa-v2G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X7z-Bs-IdW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I0s-ra-JAk"/>
+                    <connections>
+                        <outlet property="FullImage" destination="kIm-Sg-Zll" id="iTr-0w-qka"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wQ-Cv-gDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3875" y="100"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="z45-9J-p0e">
             <objects>

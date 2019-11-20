@@ -16,7 +16,7 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
     var arrayofImagedata: [Data] = []
     var selectedImageData: Data?
     let nsdata = NSData()
-    
+    var indexCount : Int = 0
     @IBOutlet weak var myCollectionView: UICollectionView!
    
     var presenter: LoginViewToPresenterProtocol?
@@ -35,6 +35,11 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
         
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            fetchImage()//fetching data from
+    }
+    
     //get image from source type
     func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
         //Check is source type available
@@ -67,13 +72,24 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
     }
     
     @IBAction func LogOut(_ sender: Any) {
-        
-       
-        
-    
+        //self.showAlert(withMessage: )
+        self.dismiss(animated: true, completion: nil)
         
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        if let Fullscreen = storyboard?.instantiateViewController(withIdentifier: "FullScreen") as? FullScreenViewController {
+            
+            indexCount = indexPath.row
+            Fullscreen.indexCount = indexCount
+            
+            self.navigationController?.pushViewController(Fullscreen, animated: true)
+            
+            self.navigationController?.isNavigationBarHidden = false
+            
+            
+            
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -87,12 +103,12 @@ class ImageViewController: UIViewController , UIImagePickerControllerDelegate , 
         cell.myImage.image = UIImage(data: arrayofImagedata[indexPath.row])
         return cell
     }
-    
+
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //fetchImage()
+        fetchImage()
         print(arrayofImagedata)
         print("*****************")
         self.myCollectionView.reloadData()

@@ -30,6 +30,7 @@
 		845EB31A237E73990071B8E3 /* ImagePickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EB318237E73990071B8E3 /* ImagePickerInteractor.swift */; };
 		845EB31C237E74AE0071B8E3 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EB31B237E74AE0071B8E3 /* UIViewController+Ext.swift */; };
 		845EB31E237E77140071B8E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EB31D237E77140071B8E3 /* AppDelegate.swift */; };
+		84D43B172383CE2D006A7F3E /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D43B162383CE2D006A7F3E /* FullScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		845EB31B237E74AE0071B8E3 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		845EB31D237E77140071B8E3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845EB324237E798F0071B8E3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D43B162383CE2D006A7F3E /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				845EB30F237E737D0071B8E3 /* ImageCollectionViewCell.swift */,
 				845EB310237E737D0071B8E3 /* ImagePicker.storyboard */,
 				845EB311237E737D0071B8E3 /* ImageViewController.swift */,
+				84D43B162383CE2D006A7F3E /* FullScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				845EB31C237E74AE0071B8E3 /* UIViewController+Ext.swift in Sources */,
+				84D43B172383CE2D006A7F3E /* FullScreenViewController.swift in Sources */,
 				845EB2FD237E72D80071B8E3 /* LoginViewController.swift in Sources */,
 				845EB2DC237E72950071B8E3 /* ViewController.swift in Sources */,
 				845EB319237E73990071B8E3 /* ImagePickerRouter.swift in Sources */,

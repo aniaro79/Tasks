@@ -20,14 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        DataSourceManager.configure()
 //        configureLocalServer()
         PersistenceService.applicationDocumentsDirectory()
+        LoadLogin()
+        
+        return true
+    }
+    func LoadLogin(){
         if let loginVC = LoginRouter.createLoginModule() {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.rootViewController = loginVC
             window?.makeKeyAndVisible()
             
         }
-        
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -11,7 +11,7 @@ import UIKit
 class ImagePickerPresenter:ImagePickerViewToPresenterProtocol,ImagePickerInterectorToPresenterProtocol{
    
     
-   //vina
+   
     
     var view: ImagePickerPresenterToViewProtocol?
     
